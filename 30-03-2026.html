@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScript Strings</title>
+</head>
+<body>
+    
+ //javaScript Strings//
+
+<script>
+    //1.Finding the length of a String//
+    let name = "Deshoju Sandeep";
+    console.log(name.length);
+</script>
+
+<script>
+        let firstName = "Sandeep";
+        let lastName = "Deshoju";
+        let fullName = firstName + " " + lastName;
+        console.log(fullName);
+</script>
+
+<script>
+        let result = "Welcome To the \"World\"";
+        console.log(result);
+</script>
+
+<script>
+        let message = "Hello Sandeep, " +
+              "Welcome to JavaScript learning. " +
+              "Practice daily and you will become strong.";
+              
+              console.log(message);
+
+</script>
+
+<script>
+       let substr = "Deshoju Sandeep Chary"
+       console.log(substr.substring(0,9));
+</script>
+
+<script>
+        let myname = "deshoju sandeep"
+        console.log(myname.toUpperCase());
+
+</script>
+
+
+<script>
+
+        let myname2 = "DESHOJU SANDEEP"
+        console.log(myname2.toLowerCase());
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+         let hero = "Happy hero birthday hero ram charan";
+         console.log(hero.includes("charan"))
+         console.log(hero.indexOf("birthday"))
+         console.log(hero.indexOf("no"))
+         console.log(hero.lastIndexOf("hero"))
+         console.log(hero.startsWith("Happy"))
+         console.log(hero.startsWith("hero"))
+         console.log(hero.endsWith("charan"))
+         console.log(hero.endsWith("hero"))
+</script>
+
+
+<script>
+         let Hero = "Happy hero birthday hero ram charan";
+         console.log(Hero.replace("birthday","puttinaroju"))
+</script>
+
+
+<script>
+        let trimfl = "   Deshoju Sandeep   "
+        console.log(trimfl.trim(trimfl))
+        console.log(trimfl.trimStart(trimfl))
+        console.log(trimfl.trimEnd(trimfl))
+</script>
+
+<script>
+        let trimfl1 = "   Deshoju Sandeep   "
+        console.log(trimfl1.trimStart(trimfl))
+</script>
+
+<script>
+        let trimfl2 = "   Deshoju Sandeep   "
+        console.log(trimfl2.trimEnd(trimfl))
+</script>
+
+
+//Character access//
+
+<script>
+         let ind = "Deshojusandeep";
+         console.log(ind[0]);
+         console.log(ind[1]);
+         console.log(ind[2]);
+         console.log(ind[3]);
+         console.log(ind[4]);
+         console.log(ind[5]);
+
+         console.log(ind.charAt(3));
+         console.log(ind.charAt(9));
+
+
+         console.log(ind.at(0));
+         console.log(ind.at(1));
+         console.log(ind.at(-1)); //last letter//
+         
+         //0r//
+
+         console.log(ind[ind.length-1]);
+
+
+         console.log(ind.at(-2)); //last 2nd//
+</script>
+
+
+
+<script>
+        let a = "hello";
+        let b = "hello";
+        console.log(a == b);
+        console.log(a === b);
+
+        let a1 = "hello";
+        let b1 = "Hello";
+        console.log(a1 === b1);
+        console.log(a1.toLowerCase() === b1.toUpperCase());
+</script>
+          
+            //String as Objects//
+
+<script>
+        let a2 = "sandeep";
+        let b2 = new String("desh");
+        let c = 6;
+        console.log(typeof a2);
+        console.log(typeof b2);
+        console.log(typeof c);
+</script>
+
+<script>
+        let my = "DeshojuSandeep";
+        console.log(my.slice(0,6));
+        console.log(my.slice(6));
+        console.log(my.slice(-3));
+</script>
+
+
+<script>
+        let text = "HappyBirthday";
+        console.log(text.substring(4,0)); //substring(4,0) → substring(0,4)//
+        console.log(text.substring(-4)); //Negative number → 0//
+        console.log(text.substr(0,4));   //start and lenght
+
+</script>
+
+
+<script>
+        let text1 = "HappyBirthday";
+        console.log(text1.substr(0,4));   //start and lenght
+
+</script>
+
+
+
+
+<script>
+         let rep = "nuvvu nenu";
+         console.log(rep.replace("nenu","nuvvve"));
+</script>
+
+
+
+
+<script>
+
+let word = "Nuvvu Nuvvu Nuvvu";
+
+let result1 = word.replaceAll("Nuvvu", "Nenu");
+
+console.log(result1);
+
+</script>
+
+
+
+
+<script>
+         let news = "everybidy";
+
+         let result2 = news.toUpperCase();
+
+         console.log(result2);
+
+         let news1 = "EVERYBODY HELLO";
+
+         let result3 = news1.toLowerCase();
+
+         console.log(result3);
+</script>
+
+
+<script>
+        let fname = "Deshoju";
+        let lname = "Sandeep";
+        let resultab = fname.concat(" ", lname);
+        console.log(resultab);
+</script>
+
+
+<script>
+        let peru = "   Sandeep  Deshoju  ";
+        console.log(peru.trim());
+        console.log(peru.trimStart());
+         console.log(peru.trimEnd());
+</script>
+
+<script>
+        let peru1 = "   Sandeep  Deshoju  ";
+        console.log(peru1.trimStart());
+</script>
+
+<script>
+        let peru2 = "   Sandeep  Deshoju  ";
+         console.log(peru2.trimEnd());
+</script>
+
+<script>
+        let pad = "Deshoju"
+        console.log(pad.padStart(12,"kumar",))
+        console.log(pad.padEnd(11,"nenu"))
+
+</script>
+
+<script>
+        let char = "Deshoju";
+        console.log(char.charAt(0))
+        console.log(char.charAt(1))
+        console.log(char.charAt(char.length-1))        
+
+</script>
+
+<script>
+        let splitvar = "I,LOVE,MY,INDIA";
+        console.log(splitvar.split())
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

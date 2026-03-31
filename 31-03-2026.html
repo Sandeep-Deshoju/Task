@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUNCTIONS</title>
+</head>
+
+<body>
+
+    //1.Named Function//
+    <br>
+    <br>
+    <br>
+
+
+    <h2 id="msg">Hello Oppty</h2>
+    <button onclick="changeText()">Click Me</button>
+    <script>
+        function changeText() {
+            document.getElementById("msg").innerHTML = "I love my Company";
+        }
+    </script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    //2.Anonymous Function//
+
+    <h2 id="text">Hello World</h2>
+
+    <button id="button">Click Me</button>
+
+    <script>
+
+        document.getElementById("button").onclick = function () {
+
+            document.getElementById("text").innerHTML = "Hello Sandeep";
+            document.getElementById("text").style.color = "green";
+            document.getElementById("text").style.textAlign = "center";
+            document.getElementById("button").style.color = "green";
+
+        };
+
+    </script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    //3. Function Expression//
+
+    <h2 id="line1" style="font-size: 60px;">JS Task Practice</h2>
+
+    <p onclick="changeSize()" style="font-size: 30px;">Change Size</p>
+
+    <script>
+
+        let changeSize = function () {
+            document.getElementById("line1").style.fontSize = "40px";
+            document.getElementById("line1").style.color = "green";
+        };
+
+    </script>
+
+    <br><br><br><br>
+
+
+    //4.Arrow Function (ES6)//
+
+    <br><br><br><br>
+
+
+    <h2 id="text1">Hello How Are you Sandeep</h2>
+
+    <p onclick="changeColor()">Click Here</p>
+
+    <script>
+
+        let changeColor = () => {
+            document.getElementById("text1").style.color = "Blue";
+
+        };
+
+    </script>
+
+    <br><br><br><br>
+
+    //5.Immediately Invoked Function Expression (IIFE)//
+
+    <br><br><br><br>
+
+    <h2 id="text2">Immediately Invoked Function Expression (IIFE)</h2>
+
+    <script>
+
+        (function () {
+            document.getElementById("text2").style.color = "Green";
+        })();
+
+    </script>
+
+    <br><br><br><br>
+
+
+    //6. Callback Functions//
+
+
+    <h2>Callback Function Example</h2>
+
+    <p id="out"></p>
+
+    <button onclick="start()">Click Here</button>
+
+    <script>
+
+        // Main function (takes callback as parameter)
+        function showMessage(callback) {
+            document.getElementById("out").innerHTML = "Hello Sandeep";
+            callback(); // callback function run 
+        }
+
+        // Callback function
+        function sayBye() {
+            document.getElementById("out").innerHTML += "<br>Bye";
+        }
+
+        // Button click function
+        function start() {
+            showMessage(sayBye);
+        }
+
+    </script>
+
+
+    <br><br><br><br>
+
+
+    //7. Constructor Function//
+
+    <br><br><br><br>
+
+
+    <!DOCTYPE html>
+    <html>
+
+    <body>
+
+        <h2>Constructor Function Example</h2>
+
+        <p id="output"></p>
+
+        <script>
+
+            function Car(name, color) {
+                this.name = name;
+                this.color = color;
+            }
+
+            let c1 = new Car("BMW", "Black");
+
+            document.getElementById("output").innerHTML =
+                "Car Name: " + c1.name + "<br>" +
+                "Car Color: " + c1.color;
+
+        </script>
+
+    <br><br><br><br>
+
+        //8.Async Function//
+
+        <h2>Async Function Example</h2>
+
+        <p id="output1">Loading...</p>
+
+        <script>
+
+            async function showMessage() {
+
+                let message = "Hello Sandeep";
+
+                document.getElementById("output1").innerHTML = message;
+            }
+
+            showMessage();
+
+        </script>
+
+    <br><br><br><br>
+
+
+        //9.Generator Function//
+
+        <h2>Generator Function Example</h2>
+
+        <p id="output2">Click button to see values</p>
+
+        <button onclick="showNext()">Next Value</button>
+
+        <script>
+
+            // Generator Function
+            function* numbers() {
+                yield 10;
+                yield 20;
+                yield 30;
+            }
+
+            // generator object
+            let num = numbers();
+
+            // function for button click
+            function showNext() {
+                let result = num.next();
+                document.getElementById("output2").innerHTML = result.value;
+            }
+
+        </script>
+
+    <br><br><br><br>
+
+        //10.10. Recursive Function//
+
+
+        <h2>Recursive Function Example</h2>
+
+        <p id="output3"></p>
+
+        <script>
+
+            function printNumbers(n) {
+
+                if (n > 5) return;
+
+                document.getElementById("output3").innerHTML += n + "<br>";
+
+                printNumbers(n + 1);
+            }
+
+            printNumbers(1);
+
+        </script>
+
+    <br><br><br><br>
+
+
+        //11.Higher-Order Function//
+
+        <h2>Higher-Order Function Example</h2>
+
+        <p id="output4"></p>
+
+        <button onclick="start()">Click Here</button>
+
+        <script>
+
+            // Higher-Order Function
+            function showMessage(callback) {
+                document.getElementById("output4").innerHTML = "Hello Sandeep";
+                callback();
+            }
+
+            // Normal function
+            function sayBye() {
+                document.getElementById("output4").innerHTML += "<br>Bye";
+            }
+
+            // button click function
+            function start() {
+                showMessage(sayBye);
+            }
+
+        </script>
+
+    <br><br><br><br>
+
+        //12.Nested Functions//
+
+        <h2>Nested Function Example</h2>
+
+        <p id="output5"></p>
+
+        <button onclick="start()">Click Here</button>
+
+        <script>
+
+            function start() {
+
+                function showMessage() {
+                    document.getElementById("output5").innerHTML = "Hello Sandeep";
+                }
+
+                showMessage();
+            }
+
+        </script>
+
+        <br><br><br>
+
+    <br><br><br><br>
+
+
+        //13.Pure Functions//
+
+
+        <h2>Pure Function Example</h2>
+
+        <p id="output6"></p>
+
+        <button onclick="showResult()">Click Here</button>
+
+        <script>
+
+            // Pure Function
+            function add(a, b) {
+                return a + b;
+            }
+
+            // normal function
+            function showResult() {
+                let result = add(5, 3);
+                document.getElementById("output6").innerHTML = result;
+            }
+
+        </script>
+
+    <br><br><br><br>
+
+        //14.Default Parameter Function//
+
+        <h2>Default Parameter Example</h2>
+
+        <p id="output7"></p>
+
+        <button onclick="showMessage()">Show Message</button>
+
+        <script>
+
+            // Default Parameter Function
+            function greet(name = "Sandeep") {
+                document.getElementById("output7").innerHTML = "Hello " + name;
+            }
+
+            // button click function
+            function showMessage() {
+                greet();
+            }
+
+        </script>
+
+    <br><br><br><br>
+
+
+        //15. Rest Parameter Function//
+
+        <h2>Rest Parameter Example</h2>
+
+        <p id="output8"></p>
+
+        <button onclick="showTotal()">Show Total</button>
+
+        <script>
+
+            // Rest Parameter Function
+            function addNumbers(...numbers) {
+
+                let sum = 0;
+
+                for (let i = 0; i < numbers.length; i++) {
+                    sum += numbers[i];
+                }
+
+                document.getElementById("output8").innerHTML = sum;
+            }
+
+            // button click function
+            function showTotal() {
+                addNumbers(10, 20, 30, 40);
+            }
+
+        </script>
+
+    <br><br><br><br>
+
+
+
+        //16.Storing in Variables//
+
+
+        <h2>Function Stored in Variable Example</h2>
+
+        <p id="output9"></p>
+
+        <button onclick="show()">Click Here</button>
+
+        <script>
+
+            // Function stored in variable
+            let greet = function () {
+                document.getElementById("output9").innerHTML = "Hello Sandeep";
+            };
+
+            // button click function
+            function show() {
+                greet();
+            }
+
+        </script>
+
+    <br><br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        //17.Callback Functions using Function Expressions//
+
+        <h2>Callback in Function Expression</h2>
+
+        <p id="output9"></p>
+
+        <button onclick="start()">Click Here</button>
+
+        <script>
+
+            // Function Expression (main function)
+            let showMessage = function (callback) {
+                document.getElementById("output9").innerHTML = "Hello Sandeep";
+                callback();
+            };
+
+            // Function Expression (callback function)
+            let sayBye = function () {
+                document.getElementById("output9").innerHTML += "<br>Bye";
+            };
+
+            // button click function
+            function start() {
+                showMessage(sayBye);
+            }
+
+        </script>
+
+
+    <br><br><br><br>
+
+
+        //18. Event Handlers//
+
+
+        <h2>Event Handler using Function Expression</h2>
+
+        <p id="text3">Hello</p>
+
+        <button id="btn3">Click Me</button>
+
+        <script>
+
+            // button element 
+            let button = document.getElementById("btn3");
+
+            // Function Expression
+            let changeText = function () {
+                document.getElementById("text3").innerHTML = "Welcome Sandeep";
+            };
+
+            // Event Handler
+            button.onclick = changeText;
+
+        </script>
+
+    <br><br><br><br>
+
+
+        //19.Self-Invoking Functions using Function Expression//
+
+
+        <h2>Self Invoking Function</h2>
+
+        <p id="output11"></p>
+
+        <script>
+
+            // Self-Invoking Function (Function Expression)
+            (function () {
+                document.getElementById("output11").innerHTML = "Hello Sandeep";
+            })();
+
+        </script>
+
+
+
+
+
+
+
+
+
+    </body>
+
+    </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

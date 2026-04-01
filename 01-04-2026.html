@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Buttons</title>
+    <link rel="stylesheet" href="01-04-2026.css">
+</head>
+
+<body>
+
+    <script>
+
+        document.body.style.backgroundColor = "white";    // Body white 
+
+
+        let heading = document.createElement("h1");
+        heading.textContent = "Choose your mood";         // Heading
+        document.body.appendChild(heading);
+
+
+        let msg = document.createElement("p");
+        msg.className = "message";                        // Message
+        document.body.appendChild(msg);
+
+
+
+
+        let happyBtn = document.createElement("button");
+        happyBtn.textContent = "Happy";                     // Happy button
+        happyBtn.className = "happy";
+        document.body.appendChild(happyBtn);
+
+
+
+        happyBtn.onclick = function () {
+            document.body.style.backgroundColor = "yellow";     // Happy
+            msg.textContent = "Yay! Keep smiling 😊";
+        };
+
+
+
+
+        let sadBtn = document.createElement("button");
+        sadBtn.textContent = "Sad";                       // Sad button
+        sadBtn.className = "sad";
+        document.body.appendChild(sadBtn);
+
+
+
+
+        sadBtn.onclick = function () {
+            document.body.style.backgroundColor = "blue";                 // Sad
+            msg.textContent = "It's okay to feel sad sometimes.., come back soon 😢";
+        };
+
+
+
+
+
+
+
+
+        let angryBtn = document.createElement("button");
+        angryBtn.textContent = "Angry";                    // Angry button
+        angryBtn.className = "angry";
+        document.body.appendChild(angryBtn);
+
+
+
+
+        
+        angryBtn.onclick = function () {
+            document.body.style.backgroundColor = "red";
+            msg.textContent = "Calm down, don't be angry 😡";    // Angry
+        };
+
+
+
+
+
+        let relaxedBtn = document.createElement("button");
+        relaxedBtn.textContent = "Relaxed";
+        relaxedBtn.className = "relaxed";                      // Relaxed button
+        document.body.appendChild(relaxedBtn);
+
+
+
+        
+        relaxedBtn.onclick = function () {
+            document.body.style.backgroundColor = "green";   // Relaxed
+            msg.textContent = "Stay calm and relaxed 🧘‍♀️";
+        
+        
+        };
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="03-04-2026-4.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Slider</h1>
+
+        <img id="sliderImage" src="https://picsum.photos/id/101/400/200">
+
+        <div class="buttons">
+            <button id="prevBtn">Prev Image</button>
+            <p id="count">1 of 4 Images</p>
+            <button id="nextBtn">Next Image</button>
+        </div>
+    </div>
+
+    <script>
+        // 1. Images list
+
+        let images = [
+            "https://picsum.photos/id/101/400/200",
+            "https://picsum.photos/id/102/400/200",
+            "https://picsum.photos/id/103/400/200",
+            "https://picsum.photos/id/104/400/200"
+        ];
+
+        // 2. Select elements
+
+        let img = document.getElementById("sliderImage");
+        let prevBtn = document.getElementById("prevBtn");
+        let nextBtn = document.getElementById("nextBtn");
+        let count = document.getElementById("count");
+
+        // 3. Index
+
+        let currentIndex = 0;
+
+        // 4. Show image function
+
+        function showImage() {
+            img.src = images[currentIndex];
+            count.textContent = "Image " + (currentIndex + 1) + " of " + images.length;
+        }
+
+        
+        // 5. Next button
+
+        nextBtn.addEventListener("click", function () {
+            currentIndex++;
+
+            if (currentIndex >= images.length) {
+                currentIndex = 0; // loop back
+            }
+
+            showImage();
+        });
+
+        // 6. Prev button
+
+        prevBtn.addEventListener("click", function () {
+            currentIndex--;
+
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1; // go last
+            }
+
+            showImage();
+        });
+
+    </script>
+</body>
+
+</html>

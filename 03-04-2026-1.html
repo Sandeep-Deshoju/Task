@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOM COLOR GENERATOR</title>
+    <link rel="stylesheet" href="03-04-2026-2.css">
+</head>
+<body>
+ <div class="container">
+    <h1>Random Color Generator</h1>
+
+    <div class="colors">
+      <div class="box Pink"></div>
+      <div class="box Purple"></div>
+      <div class="box Brown"></div>
+      <div class="box SlateGray"></div>
+    </div>
+
+    <p >Click a box to change the background!</p>
+  </div>
+
+  <script>
+    let boxes = document.querySelectorAll(".box");
+    boxes.forEach(function(box) 
+    {
+      box.addEventListener("click", function() 
+    {
+    let color = box.classList[1];
+    document.body.style.backgroundColor = color;
+    });
+    });
+  </script>
+</body>
+</html>

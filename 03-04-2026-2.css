@@ -1,0 +1,41 @@
+body {
+      background-color: Air Force blue;
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background: #ddd;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(219, 139, 139, 0.3);
+    }
+.container p{
+    font-size: 25px;
+}
+
+    .colors {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin: 20px 0;
+    }
+
+    .box {
+      width: 90px;
+      height: 90px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 5px black;
+    }
+
+    .Pink { background: Pink; }
+    .Purple  { background: Purple ; }
+    .Brown { background: Brown; }
+    .SlateGray { background: SlateGray; }
+
+ 

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body {
+      font-family: Arial;
+      text-align: center;
+      margin-top: 50px;
+      background-color: rgb(242, 255, 255);
+    }
+
+    .product{
+        font-size: 25px;
+    }
+    select, input {
+      padding: 8px;
+      width: 200px;
+      height: 30px;
+      margin: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      background-color: rgb(17, 173, 17);
+      color: rgb(0, 0, 0);
+      font-size: 18px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      width: 200px;
+      height: 50px;
+    
+    }
+
+    p {
+      font-size: 25px;
+    }
+  </style>
+</head>
+
+
+<body>
+       <h1 style="font-size: 40px;">Product Discount Calculator</h1>
+
+  <!-- Product Dropdown -->
+
+  <label style="font-size: 25px;">Select Your Product From DropDown:</label>
+  <select id="product">
+    <option value="800">Mouse</option>
+    <option value="1500">Keyboard</option>
+    <option value="50000">Laptop</option>
+  </select>
+  <br>
+
+  <!-- Discount Input -->
+
+  <label style="font-size: 25px;">Enter Your Discount In Percentage:</label>
+  <input type="number" id="discount" placeholder="Enter % in Number">
+  <br>
+
+  <!-- Button -->
+
+  <button onclick="calculate()">Get Your Final Price</button>
+
+  <!-- Output -->
+
+  <p id="original"></p>
+  <p id="final"></p>
+
+  <script>
+    function calculate() {
+
+      // 1. Get values
+
+      let price = document.getElementById("product").value;
+      let discount = document.getElementById("discount").value;
+
+      // Convert to number
+
+      price = Number(price);
+      discount = Number(discount);
+
+      // 2. Calculate discount and finalprice comes from here
+
+      let discountAmount = (price * discount) / 100;
+      let finalPrice = price - discountAmount;
+
+      // 3. Display output
+
+      document.getElementById("original").innerText = "Original Price is = " + price;
+      document.getElementById("final").innerText = "Total Amount is = " + finalPrice;
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="website.css">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="logo">JAMES CONSULTING</div>
+
+        <nav>
+            <a href="#About Us">About</a>
+            <a href="#Ours">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Plans & Pricing</a>
+            <a href="#">Tools & Tips</a>
+            <a href="#Contact">Contact</a>
+
+            <div class="login" onclick="loginClick()">
+                <div class="login-icon">👤</div>
+                <span>Log In</span>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+        <div class="hero-box">
+            <p>Developing Innovative Strategies</p>
+            <h1>ACHIEVING GROWTH</h1>
+            <button onclick="consult()">Free Consultation</button>
+        </div>
+    </section>
+
+
+    <!-- SERVICES SECTION -->
+
+    <section class="section">
+
+        <div class="card">
+
+            <h2>SERVICES</h2>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
+                click me to add your own content and make changes to the font. I’m a great place for you to tell a story
+                and let your users know a little more about you.</p>
+            <button onclick="moreInfo('Services')">More Info</button>
+        </div>
+
+        <div class="card">
+            <h2>PROJECTS</h2>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
+                click me to add your own content and make changes to the font. I’m a great place for you to tell a story
+                and let your users know a little more about you.</p>
+            <button onclick="moreInfo('Projects')">More Info</button>
+
+        </div>
+
+
+        <div class="card">
+            <h2>CLIENTS</h2>
+            <p>I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double
+                click me to add your own content and make changes to the font. I’m a great place for you to tell a story
+                and let your users know a little more about you.</p>
+            <button onclick="moreInfo('Clients')">More Info</button>
+
+        </div>
+
+    </section>
+
+    <!-- CHAT BUTTON -->
+
+
+    <div class="chat-btn" onclick="chat()">💬</div>
+
+    <!-- JS -->
+
+
+    <script>
+        function loginClick() {
+            alert("Login Clicked");
+        }
+
+        function consult() {
+            alert("Free Consultation Clicked");
+        }
+
+        function chat() {
+            alert("Chat Opened");
+        }
+    </script>
+
+
+
+
+    <section class="about-section" id="About Us">
+        <div class="about-overlay">
+            <div class="about-content">
+
+                <h1>ABOUT US</h1>
+                <p>I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click "Edit Text" or
+                    double click me to add your own content and make changes to the font.</p>
+                <p>This is a great space to write a long text about your company and your services. You can use this
+                    space to go into a little more detail about your company. Talk about your team and what services you
+                    provide.</p>
+                <a href="https://www.wix.com/website-template/view/html/2852?utm_source=freewebsitetemplates&utm_medium=template_banner&utm_term=business&utm_content=ma_fwt_tab2_temp_1&utm_campaign=ma_fwt&experiment_id=cpa_fwt_tab2_temp_1" class="btn-about">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="services-grid-section">
+        <div class="grid-container" >
+            <h2 class="grid-title" id="Ours">OUR SERVICES</h2>
+
+
+            <div class="services-grid">
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_dae59a52e2274d72b9826ba66671cc8d~mv2.jpg/v1/fill/w_105,h_105,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_dae59a52e2274d72b9826ba66671cc8d~mv2.jpg"
+                            alt="Custom Project">
+                    </div>
+                    <span class="service-number">01.</span>
+                    <h3>Custom Project</h3>
+                    <p>We tailor our services precisely to your unique requirements. This package is designed to address
+                        specific challenges or goals, ensuring a personalized approach that delivers optimal results.
+                    </p>
+                <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_66423b8b94974a04ae261649266370a7~mv2.jpg/v1/fill/w_105,h_105,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_66423b8b94974a04ae261649266370a7~mv2.jpg"
+                            alt="Personal Solution Planning">
+                    </div>
+                    <span class="service-number">02.</span>
+                    <h3>Personal Solution Planning</h3>
+                    <p>Receive bespoke solutions crafted after in-depth discussions about your individual needs and
+                        aspirations. We focus on understanding your situation to provide actionable and effective
+                        strategies.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_e2936f897f5d4b1b824e723b2384653d~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_e2936f897f5d4b1b824e723b2384653d~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">03.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Gain access to our team's specialized knowledge and insights. This package offers comprehensive
+                        advice and strategic direction to help you navigate complex situations and achieve your
+                        objectives.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_a04f1fe44414475587b752835a2c4d0c~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_a04f1fe44414475587b752835a2c4d0c~mv2.jpg"
+                            alt="Custom Project">
+                    </div>
+                    <span class="service-number">04.</span>
+                    <h3>Custom Project</h3>
+                    <p>Need a unique solution tailored to your specific needs? Our team will work closely with you to
+                        define project scope, develop innovative strategies, and outline a clear path for execution.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_80aeaed7d2f645b89fb49a75b6a7c0f8~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_80aeaed7d2f645b89fb49a75b6a7c0f8~mv2.jpg"
+                            alt="Personal Solution Planning">
+                    </div>
+                    <span class="service-number">05.</span>
+                    <h3>Personal Solution Planning</h3>
+                    <p>Let us understand your individual requirements and aspirations. We offer dedicated sessions
+                        to explore your situation, identify key goals, and map out a personalized strategy. Our
+                        approach ensures that your specific needs are at the forefront of our planning.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_234b2c42586a4749add69937a8fbc444~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_234b2c42586a4749add69937a8fbc444~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">06.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Leverage our deep industry knowledge and experience to navigate your toughest decisions. This
+                        package provides access to expert insights, strategic advice, and detailed recommendations
+                        to help you achieve your objectives. We guide you through complex landscapes with
+                        confidence.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_10ddb949d8704deea90a5c285d6c00cd~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_10ddb949d8704deea90a5c285d6c00cd~mv2.jpg"
+                            alt="Custom Project Development">
+                    </div>
+                    <span class="service-number">07.</span>
+                    <h3>Custom Project Development</h3>
+                    <p>Bring your unique vision to life with our bespoke solutions, meticulously designed to meet
+                        your specific requirements. We collaborate closely with you from concept to completion,
+                        ensuring a one-of-a-kind outcome tailored for maximum impact and satisfaction.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_cca34803ffa54051b331b94979ea7557~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_cca34803ffa54051b331b94979ea7557~mv2.jpg"
+                            alt="Personalized Strategy Session">
+                    </div>
+                    <span class="service-number">08.</span>
+                    <h3>Personalized Strategy Session</h3>
+                    <p>Unlock your potential with our dedicated planning service, where we delve into your distinct
+                        challenges and objectives. Through attentive listening and insightful discussion, we map out
+                        actionable steps to guide you toward achieving your goals effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_62efd862cb0a4a799d6e10464bcecbd2~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_62efd862cb0a4a799d6e10464bcecbd2~mv2.jpg"
+                            alt="Client Success Roadmap">
+                    </div>
+                    <span class="service-number">09.</span>
+                    <h3>Client Success Roadmap</h3>
+                    <p>Navigate your journey with confidence using our comprehensive roadmap service, designed by
+                        seasoned
+                        professionals. We illuminate the path forward, providing clear, expert-backed direction to
+                        overcome
+                        obstacles and achieve your desired outcomes efficiently.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6212b161ccb84c5f920a16feec6124cc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6212b161ccb84c5f920a16feec6124cc~mv2.jpg"
+                            alt="Custom Project">
+                    </div>
+                    <span class="service-number">10.</span>
+                    <h3>Custom Project</h3>
+                    <p>Unlock unique solutions tailored precisely to your specific needs. This service is designed for
+                        bespoke requirements that demand creative problem-solving and innovative approaches. We
+                        collaborate
+                        closely with you to ensure the final outcome perfectly aligns with your vision and objectives.
+                    </p><a href="#">Show More</a>
+                </div>
+
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_f1249e328137422aac895d98c9e21429~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_f1249e328137422aac895d98c9e21429~mv2.jpg"
+                            alt="Personal Solution Planning">
+                    </div>
+                    <span class="service-number">11.</span>
+                    <h3>Personal Solution Planning</h3>
+                    <p>Receive a personalized roadmap crafted to address your individual goals and circumstances. We
+                        dive
+                        deep into understanding your situation to develop actionable plans. This service focuses on
+                        strategic guidance to help you navigate complexities and achieve desired outcomes efficiently.
+                    </p>
+                    <a href="#">Show More</a>
+                </div>
+
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">12.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">13.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">14.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">15.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">16.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">17.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">18.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">19.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">20.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">21.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">22.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">23.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">24.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">25.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">26.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">27.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">28.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">30.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">31.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_6eba527e7d654af6916a1169e5db1ffc~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">32.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_df23fe0bcff54495904f0ec050a02d1c~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_df23fe0bcff54495904f0ec050a02d1c~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">33.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_5be36941b6ad49d39b53aec511b13ba4~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_5be36941b6ad49d39b53aec511b13ba4~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">34.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_01cfeabb029c41aa9988609789f507f1~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_01cfeabb029c41aa9988609789f507f1~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">35.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_b2d8933010e74502a9d4dffed897f729~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_b2d8933010e74502a9d4dffed897f729~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">36.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This package offers structured advice and strategic recommendations to steer your project in the
+                        right direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_fd25877b51ea4525a320ae8ec0749ca3~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_fd25877b51ea4525a320ae8ec0749ca3~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">37.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This package offers structured advice and strategic recommendations to steer your project in the
+                        right direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_d68ae51f3ef04be3b89bc9df0b92f770~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_d68ae51f3ef04be3b89bc9df0b92f770~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">38.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This package offers structured advice and strategic recommendations to steer your project in the
+                        right direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_8939aaa5c9294f11a91d9b3640b5c18c~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_8939aaa5c9294f11a91d9b3640b5c18c~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">39.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This package offers structured advice and strategic recommendations to steer your project in the
+                        right direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_079291774e074aeeaa44af5c703a5f4e~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_079291774e074aeeaa44af5c703a5f4e~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">40.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_d342110202cd4077b27fd06df6fd8a81~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_d342110202cd4077b27fd06df6fd8a81~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">41.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
+                        This
+                        package offers structured advice and strategic recommendations to steer your project in the
+                        right
+                        direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
+                    <a href="#">Show More</a>    
+                </div>
+
+
+
+                <div class="service-item">
+                    <div class="image-wrapper">
+                        <img src="https://static.wixstatic.com/media/323cdb_74273b4e78224028bbac906c3435ef0a~mv2.jpg/v1/fill/w_110,h_110,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_auto/323cdb_74273b4e78224028bbac906c3435ef0a~mv2.jpg"
+                            alt="Expert Guidance Package">
+                    </div>
+                    <span class="service-number">42.</span>
+                    <h3>Expert Guidance Package</h3>
+                    <p>Leverage our deep industry knowledge and experience to navigate complex challenges. This package
+                        offers strategic insights and creative problem-solving sessions to help you make informed
+                        decisions. Unlock new possibilities and overcome obstacles.</p>
+
+                    <a href="#">Show More</a>    
+                </div>
+
+    </section>
+
+
+    <section class="clients-section">
+        <div class="container">
+            <div class="consultation-box">
+                <a href="#" class="btn-outline">Free Consultation</a>
+            </div>
+
+            <h1 class="section-title">OUR CLIENTS</h1>
+
+            <div class="logo-grid">
+                <div class="client-logo"><img
+                        src="first.jpg" alt="Keno"></div>
+                <div class="client-logo"><img
+                        src="second.jpg"alt="Lendo"></div>
+                <div class="client-logo"><img
+                        src="third.jpg" alt="DMC"></div>
+                <div class="client-logo"><img
+                        src="fourth.jpg" alt="Athos"></div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">TESTIMONIALS</h2>
+
+            <div class="testimonial-slider">
+                <button class="prev-btn">&#10094;</button>
+
+                <div class="testimonial-content">
+                    <p class="quote">"I'm a testimonial. Click to edit me and add text that says something nice about
+                        you and your services."</p>
+                    <div class="author-info">
+                        <span class="role">Project Manager</span> <span class="name">Dora Bridges</span>
+                    </div>
+                </div>
+
+                <button class="next-btn">&#10095;</button>
+            </div>
+
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="contact-map-section">
+        <div class="container">
+            <h2 class="section-title white-text">GET A FREE CONSULTATION</h2>
+
+            <div class="map-wrapper">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.123456789!2d-122.4194!3d37.7749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c6c8f4459%3A0xb10ed6d9b5050ef5!2sSan%20Francisco%2C%20CA!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    
+
+
+    <footer class="main-footer" id="Contact">
+    <div class="container footer-grid">
+        <div class="footer-col">
+            <h3 class="footer-logo">JAMES CONSULTING</h3>
+            <address>
+                500 Terry Francine Street,<br>
+                San Francisco, CA 94158<br>
+                Mail: <a href="mailto:info@mysite.com">info@mysite.com</a><br>
+                Tel: 123-456-7890
+            </address>
+        </div>
+
+        <div class="footer-col">
+
+            <h4>MENU</h4>
+            <ul class="footer-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#pricing">Plans & Pricing</a></li>
+                <li><a href="#tools">Tools & Tips</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>SOCIALS</h4>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="copyright">
+                <p>© 2035 by JAMES CONSULTING.</p>
+                <p>Powered and secured by <a href="#">Wix</a></p>
+            </div>
+        </div>
+    </div>
+
+
+     <div id="chatBox">
+        <p>Hello 👋</p>
+        <input type="text" placeholder="Type message">
+        <button onclick="toggleChat()">Close</button>
+     </div>
+</footer>
+
+
+
+    <script src="website.js"></script>
+</body>
+
+</html>

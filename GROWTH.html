@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 60px 20px;
+    color: #333;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.page-header h1 {
+    color: #0b3d59;
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Makes all cards equal height */
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing-card {
+    flex: 1;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Gray background for middle card */
+.pricing-card.featured {
+    background-color: #ebebeb;
+}
+
+/* "Best Value" Badge */
+.badge {
+    position: absolute;
+    top: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0b3d59;
+    color: white;
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.card-header {
+    padding: 40px 30px;
+    text-align: center;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-header h3 {
+    font-weight: 300;
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+.price {
+    font-size: 4.5rem;
+    color: #0b3d59;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.price span {
+    font-size: 1.2rem;
+    vertical-align: super;
+    margin-right: 2px;
+}
+
+.tagline {
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    min-height: 40px; /* Keeps buttons aligned */
+}
+
+.validity {
+    font-size: 0.7rem;
+    color: #999;
+    margin-bottom: 30px;
+}
+
+.select-btn {
+    background-color: #0b3d59;
+    color: #fff;
+    border: none;
+    padding: 14px 0;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.select-btn:hover {
+    opacity: 0.9;
+}
+
+.card-features {
+    padding: 40px 30px;
+}
+
+.card-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card-features li {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+/* Checkmark icons */
+.card-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 900px) {
+    .pricing-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pricing-card {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 40px;
+    }
+}
+    </style>
+</head>
+<body>
+       <section class="pricing-container">
+        <header class="page-header">
+            <h1>GROWTH AND INNOVATION PLANS</h1>
+            <p>We help businesses improve their performance through innovation in products, services, and strategy.</p>
+        </header>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3>Management 101</h3>
+                    <div class="price"><span>$</span>50</div>
+                    <p class="tagline">Actualize your business model and boost your KPIs</p>
+                    <p class="validity">Valid for 3 months</p>
+                    <button class="select-btn">Select</button>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li>1 Goal setting consultation</li>
+                        <li>3 Individual sessions</li>
+                        <li>Online resources</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pricing-card featured">
+                <div class="badge">Best Value</div>
+                <div class="card-header">
+                    <h3>Financial Strategy</h3>
+                    <div class="price"><span>$</span>100</div>
+                    <p class="tagline">Add value and maximize your competitive advantage</p>
+                    <p class="validity">Valid for 6 months</p>
+                    <button class="select-btn">Select</button>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li>1 Monthly goal setting meeting</li>
+                        <li>Unlimited individual sessions</li>
+                        <li>Online resources</li>
+                        <li>Phone support</li>
+                        <li>Weekly newsletter</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pricing-card">
+                <div class="card-header">
+                    <h3>Data and Digital Sol</h3>
+                    <div class="price"><span>$</span>70</div>
+                    <p class="tagline">Harness the power of technology to upgrade your business</p>
+                    <p class="validity">Valid for 12 months</p>
+                    <button class="select-btn">Select</button>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li>1 Monthly goal setting meeting</li>
+                        <li>4 Individual sessions</li>
+                        <li>Online resources</li>
+                        <li>1 Guest pass</li>
+                        <li>Phone support</li>
+                        <li>Weekly newsletter</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

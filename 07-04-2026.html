@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #7aa7b8, #8f9b81);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #e2bc5a;
+            padding: 30px;
+            border-radius: 12px;
+            width: 400px;
+            height: 400px;
+            box-shadow: 0 5px 15px rgba(144, 27, 27, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-style: normal;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 10px;
+            border: 2px solid #2be207;
+            font-size: 14px;
+        }
+
+        button {
+            width: 95%;
+            padding: 12px;
+            margin-top: 20px;
+            background: #2f6f97;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #ced1d3;
+        }
+
+        .result {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Bank Loan EMI Calculator</h2>
+
+        <label>Loan Amount (P):</label>
+        <input type="number" id="amount" value="1000000">
+
+        <label>Annual Interest Rate (%):</label>
+        <input type="number" id="rate" value="9">
+
+        <label>Tenure (months):</label>
+        <input type="number" id="time" value="24">
+
+        <button onclick="calculateEMI()">Calculate EMI</button>
+
+        <div class="result" id="result">
+            Monthly EMI: 45684.74
+        </div>
+    </div>
+
+    <script>
+        function calculateEMI() {
+            let P = document.getElementById("amount").value;
+            let R = document.getElementById("rate").value / 12 / 100;
+            let N = document.getElementById("time").value;
+
+            let EMI = (P * R * Math.pow(1 + R, N)) / (Math.pow(1 + R, N) - 1);
+
+            document.getElementById("result").innerText =
+                "Monthly EMI: " + EMI.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>

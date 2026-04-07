@@ -5,8 +5,649 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="website.css">
 </head>
+<style>
+    /* RESET */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f5f5f5;
+    }
+
+    /* 🔥 FIXED NAVBAR */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #123e5c;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 40px;
+        z-index: 1000;
+    }
+
+    .logo {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    nav {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+    }
+
+    .login {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .login-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: white;
+        color: #123e5c;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* HERO SECTION */
+
+    .hero {
+        margin-top: 70px;
+        /* avoid navbar overlap */
+        height: 80vh;
+        background: url("https://static.wixstatic.com/media/82fcd3_47a465bb9c6f4b52a0cc83f281806af8~mv2.jpg/v1/fill/w_2000,h_546,al_c,q_85,enc_avif,quality_auto/82fcd3_47a465bb9c6f4b52a0cc83f281806af8~mv2.jpg") center/cover no-repeat;
+        position: relative;
+    }
+
+    /* CENTER BOX */
+
+
+    .hero-box {
+        position: absolute;
+        bottom: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #eee;
+        padding: 40px 60px;
+        text-align: center;
+        width: 500px;
+    }
+
+    .hero-box h1 {
+        font-size: 36px;
+        margin: 10px 0;
+        color: #123e5c;
+    }
+
+    .hero-box p {
+        font-size: 14px;
+    }
+
+    .hero-box button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: 1px solid #123e5c;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    /* 3 COLUMN SECTION */
+
+
+    .section {
+        margin-top: 120px;
+        display: flex;
+        justify-content: space-around;
+        padding: 60px 40px;
+        text-align: center;
+    }
+
+    .card {
+        width: 25%;
+    }
+
+    .card h2 {
+        margin-bottom: 20px;
+        color: #123e5c;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #444;
+        line-height: 1.6;
+        margin-bottom: 40px;
+    }
+
+    /* CHAT BUTTON */
+
+
+    .chat-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 55px;
+        height: 55px;
+        background: #123e5c;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    /* BUTTON */
+
+
+    .card button {
+        padding: 12px 30px;
+        border: 1px solid #123e5c;
+        background: transparent;
+        color: #123e5c;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .card button:hover {
+        background: #123e5c;
+        color: white;
+    }
+
+
+
+    .about-section {
+        position: relative;
+        height: 80vh;
+        background-image: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=2070');
+        /* Placeholder mountain image */
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    .about-overlay {
+        background-color: rgba(220, 235, 245, 0.8);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-content {
+        max-width: 700px;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .about-content h1 {
+        font-weight: 400;
+        letter-spacing: 4px;
+        margin-bottom: 50px;
+    }
+
+    .about-content p {
+        margin-bottom: 20px;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: normal;
+        color: rgb(84, 76, 76);
+
+    }
+
+    .about-content btn-outline {
+        border: 12px solid #123e5c;
+
+    }
+
+    .btn-about {
+        border: 1px solid black;
+        display: inline-block;
+        width: 130px;
+        height: 50px;
+        text-decoration: none;
+        padding-top: 10px;
+        margin-top: 50px;
+
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            flex-direction: column;
+        }
+
+        .about-section {
+            height: auto;
+            padding: 60px 0;
+        }
+    }
+
+
+    .services-grid-section {
+        padding: 80px 0;
+        background-color: #fff;
+    }
+
+    .grid-container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 40px;
+    }
+
+    .grid-title {
+        text-align: center;
+        font-weight: 400;
+        letter-spacing: 4px;
+        margin-bottom: 60px;
+        color: #002e47;
+    }
+
+    .services-grid {
+        display: grid;
+        /* Forces exactly 4 columns as seen in p6 */
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding-top: 40px;
+    }
+
+    .service-item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        /* This is the key: it reserves a square space even if the image is missing */
+        aspect-ratio: 1 / 1;
+        background-color: #f0f0f0;
+        /* Light grey placeholder so it doesn't look empty */
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* Ensures image fills the square without stretching */
+        transition: transform 0.5s ease;
+    }
+
+    .service-item:hover img {
+        transform: scale(1.05);
+    }
+
+    .service-number {
+        font-size: 0.8rem;
+        color: #888;
+        margin-bottom: 5px;
+    }
+
+    .service-item h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #002e47;
+    }
+
+    .service-item p {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #444;
+    }
+
+    @media (max-width: 1024px) {
+        .services-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .services-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .grid-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 60px 20px;
+    }
+
+
+
+    .services-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 30px;
+        row-gap: 50px;
+        /* Adds space between the top row and p7 row */
+    }
+
+
+    .service-number {
+        display: block;
+        font-size: 0.75rem;
+        color: #666;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+
+    .service-item h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #002e47;
+        margin-bottom: 12px;
+        text-transform: capitalize;
+        /* Matches the clean heading style */
+    }
+
+    .service-item p {
+        font-size: 0.82rem;
+        line-height: 1.6;
+        color: #4a4a4a;
+        text-align: left;
+    }
+
+    /* Maintain square images regardless of original size */
+    .image-wrapper {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background-color: #f4f4f4;
+        /* Placeholder color */
+    }
+
+    .image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+
+
+
+
+    .clients-section {
+        padding: 100px 0;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .consultation-box {
+        margin-top: 100px;
+        font-size: 20px;
+        border: 2px solid black;
+        width: 270px;
+        height: 50px;
+        margin: 0 auto;
+        margin-bottom: 200px;
+        padding-top: 10px;
+    }
+
+    .section-title {
+        margin-bottom: 100px;
+    }
+
+    .btn-outline {
+        border: 3px solid var(--navy);
+        border-color: black;
+        padding: 15px 40px;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .btn-outline:hover {
+        background: var(--navy);
+        color: #a71a1a;
+    }
+
+    .logo-grid {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        opacity: 1;
+        padding-top: 40px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .client-logo img {
+        max-width: 120px;
+        height: auto;
+        filter: grayscale(100%);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+        .services-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .logo-grid {
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+    }
+
+
+
+    .testimonials-section {
+        padding: 100px 0;
+        text-align: center;
+        background-color: #f9f9f9;
+    }
+
+    .testimonial-slider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .quote {
+        font-size: 1.2rem;
+        font-style: italic;
+        color: #4a4a4a;
+        margin-bottom: 30px;
+        padding: 0 40px;
+        line-height: 1.8;
+    }
+
+    .author-info .role {
+        display: block;
+        font-weight: 600;
+        color: #002e47;
+        font-size: 0.9rem;
+    }
+
+    .author-info .name {
+        font-size: 0.85rem;
+        color: #666;
+    }
+
+    /* Navigation & Dots */
+    .prev-btn,
+    .next-btn {
+        background: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        color: #333;
+        transition: 0.3s;
+    }
+
+    .slider-dots {
+        margin-top: 40px;
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px;
+        margin: 0 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .dot.active {
+        background-color: #333;
+        border: 1px solid #333;
+        background-color: transparent;
+        /* Matches p11/p12 hollow dot style */
+    }
+
+
+
+
+
+
+
+    /* Contact & Map Section */
+
+
+    .contact-map-section {
+        background-color: #002e47;
+        /* Matching the dark navy from your p13 file */
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .white-text {
+        color: #ffffff;
+        margin-bottom: 50px;
+    }
+
+    .map-wrapper {
+        max-width: 1000px;
+        margin: 0 auto;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        line-height: 0;
+        width: 100%;
+    }
+
+    .map-wrapper iframe {
+        filter: grayscale(100%) invert(90%) contrast(90%);
+        transition: 0.3s;
+    }
+
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+
+
+
+
+
+    /* Footer Styles */
+
+
+
+    .main-footer {
+        background-color: #001a2c;
+        color: white;
+        padding: 80px 0 40px;
+        font-size: 1rem;
+        position: relative;
+    }
+
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 40px;
+    }
+
+    .footer-col h3,
+    .footer-col h4 {
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+        margin-bottom: 25px;
+        font-weight: 400;
+    }
+
+    .footer-col address {
+        font-style: normal;
+        line-height: 1.8;
+        color: #cbd5e0;
+    }
+
+    .footer-col address a,
+    .footer-links a {
+        color: inherit;
+        text-decoration: none;
+        transition: opacity 0.3s;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 10px;
+    }
+
+    .footer-links a:hover {
+        opacity: 0.7;
+    }
+
+    .social-icons {
+        margin-bottom: 30px;
+        font-size: 1.2rem;
+    }
+
+    .social-icons a {
+        color: rgb(147, 22, 22);
+        margin-right: 15px;
+    }
+
+    .copyright {
+        font-size: 0.75rem;
+        color: #a0aec0;
+        line-height: 1.5;
+    }
+
+
+    .chatBox {
+        position: fixed;
+        bottom: 80px;
+        right: 20px;
+        width: 300px;
+        background: white;
+        border: 2px solid black;
+        padding: 10px;
+        display: none;
+        /* hidden first */
+    }
+</style>
 
 <body>
 
@@ -17,9 +658,9 @@
         <nav>
             <a href="#About Us">About</a>
             <a href="#Ours">Services</a>
-            <a href="#">Projects</a>
-            <a href="#">Plans & Pricing</a>
-            <a href="#">Tools & Tips</a>
+            <a href="PROJECTS.html">Projects</a>
+            <a href="GROWTH.html">Plans & Pricing</a>
+            <a href="tooltip.html">Tools & Tips</a>
             <a href="#Contact">Contact</a>
 
             <div class="login" onclick="loginClick()">
@@ -111,7 +752,8 @@
                 <p>This is a great space to write a long text about your company and your services. You can use this
                     space to go into a little more detail about your company. Talk about your team and what services you
                     provide.</p>
-                <a href="https://www.wix.com/website-template/view/html/2852?utm_source=freewebsitetemplates&utm_medium=template_banner&utm_term=business&utm_content=ma_fwt_tab2_temp_1&utm_campaign=ma_fwt&experiment_id=cpa_fwt_tab2_temp_1" class="btn-about">Learn More</a>
+                <a href="https://www.wix.com/website-template/view/html/2852?utm_source=freewebsitetemplates&utm_medium=template_banner&utm_term=business&utm_content=ma_fwt_tab2_temp_1&utm_campaign=ma_fwt&experiment_id=cpa_fwt_tab2_temp_1"
+                    class="btn-about">Learn More</a>
             </div>
         </div>
     </section>
@@ -123,7 +765,7 @@
 
 
     <section class="services-grid-section">
-        <div class="grid-container" >
+        <div class="grid-container">
             <h2 class="grid-title" id="Ours">OUR SERVICES</h2>
 
 
@@ -140,7 +782,7 @@
                     <p>We tailor our services precisely to your unique requirements. This package is designed to address
                         specific challenges or goals, ensuring a personalized approach that delivers optimal results.
                     </p>
-                <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -155,7 +797,7 @@
                     <p>Receive bespoke solutions crafted after in-depth discussions about your individual needs and
                         aspirations. We focus on understanding your situation to provide actionable and effective
                         strategies.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
                 <div class="service-item">
@@ -168,7 +810,7 @@
                     <p>Gain access to our team's specialized knowledge and insights. This package offers comprehensive
                         advice and strategic direction to help you navigate complex situations and achieve your
                         objectives.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -182,7 +824,7 @@
                     <h3>Custom Project</h3>
                     <p>Need a unique solution tailored to your specific needs? Our team will work closely with you to
                         define project scope, develop innovative strategies, and outline a clear path for execution.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -197,7 +839,7 @@
                     <p>Let us understand your individual requirements and aspirations. We offer dedicated sessions
                         to explore your situation, identify key goals, and map out a personalized strategy. Our
                         approach ensures that your specific needs are at the forefront of our planning.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -214,7 +856,7 @@
                         package provides access to expert insights, strategic advice, and detailed recommendations
                         to help you achieve your objectives. We guide you through complex landscapes with
                         confidence.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -229,7 +871,7 @@
                     <p>Bring your unique vision to life with our bespoke solutions, meticulously designed to meet
                         your specific requirements. We collaborate closely with you from concept to completion,
                         ensuring a one-of-a-kind outcome tailored for maximum impact and satisfaction.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -244,7 +886,7 @@
                     <p>Unlock your potential with our dedicated planning service, where we delve into your distinct
                         challenges and objectives. Through attentive listening and insightful discussion, we map out
                         actionable steps to guide you toward achieving your goals effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -262,7 +904,7 @@
                         professionals. We illuminate the path forward, providing clear, expert-backed direction to
                         overcome
                         obstacles and achieve your desired outcomes efficiently.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -314,7 +956,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -331,7 +973,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -348,7 +990,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -365,7 +1007,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -382,7 +1024,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -399,7 +1041,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -416,7 +1058,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -433,7 +1075,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -450,7 +1092,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -467,7 +1109,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -484,7 +1126,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -501,7 +1143,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -518,7 +1160,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -535,7 +1177,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -552,7 +1194,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -569,7 +1211,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -586,7 +1228,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -603,7 +1245,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -620,7 +1262,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -637,7 +1279,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -654,7 +1296,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -671,7 +1313,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -688,7 +1330,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -702,8 +1344,9 @@
                     <h3>Expert Guidance Package</h3>
                     <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
                         This package offers structured advice and strategic recommendations to steer your project in the
-                        right direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                        right direction. Leverage our expertise to overcome obstacles and seize opportunities
+                        effectively.</p>
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -717,8 +1360,9 @@
                     <h3>Expert Guidance Package</h3>
                     <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
                         This package offers structured advice and strategic recommendations to steer your project in the
-                        right direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                        right direction. Leverage our expertise to overcome obstacles and seize opportunities
+                        effectively.</p>
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -733,8 +1377,9 @@
                     <h3>Expert Guidance Package</h3>
                     <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
                         This package offers structured advice and strategic recommendations to steer your project in the
-                        right direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                        right direction. Leverage our expertise to overcome obstacles and seize opportunities
+                        effectively.</p>
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -748,8 +1393,9 @@
                     <h3>Expert Guidance Package</h3>
                     <p>Tap into our extensive knowledge and experience to gain valuable insights for your endeavors.
                         This package offers structured advice and strategic recommendations to steer your project in the
-                        right direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                        right direction. Leverage our expertise to overcome obstacles and seize opportunities
+                        effectively.</p>
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -766,7 +1412,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -783,7 +1429,7 @@
                         package offers structured advice and strategic recommendations to steer your project in the
                         right
                         direction. Leverage our expertise to overcome obstacles and seize opportunities effectively.</p>
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
 
@@ -799,7 +1445,7 @@
                         offers strategic insights and creative problem-solving sessions to help you make informed
                         decisions. Unlock new possibilities and overcome obstacles.</p>
 
-                    <a href="#">Show More</a>    
+                    <a href="#">Show More</a>
                 </div>
 
     </section>
@@ -814,17 +1460,14 @@
             <h1 class="section-title">OUR CLIENTS</h1>
 
             <div class="logo-grid">
-                <div class="client-logo"><img
-                        src="first.jpg" alt="Keno"></div>
-                <div class="client-logo"><img
-                        src="second.jpg"alt="Lendo"></div>
-                <div class="client-logo"><img
-                        src="third.jpg" alt="DMC"></div>
-                <div class="client-logo"><img
-                        src="fourth.jpg" alt="Athos"></div>
+                <div class="client-logo"><img src="first.jpg" alt="Keno"></div>
+                <div class="client-logo"><img src="second.jpg" alt="Lendo"></div>
+                <div class="client-logo"><img src="third.jpg" alt="DMC"></div>
+                <div class="client-logo"><img src="fourth.jpg" alt="Athos"></div>
             </div>
         </div>
     </section>
+
 
 
 
@@ -858,6 +1501,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <section class="contact-map-section">
         <div class="container">
             <h2 class="section-title white-text">GET A FREE CONSULTATION</h2>
@@ -874,58 +1539,98 @@
 
 
 
-    
+
 
 
     <footer class="main-footer" id="Contact">
-    <div class="container footer-grid">
-        <div class="footer-col">
-            <h3 class="footer-logo">JAMES CONSULTING</h3>
-            <address>
-                500 Terry Francine Street,<br>
-                San Francisco, CA 94158<br>
-                Mail: <a href="mailto:info@mysite.com">info@mysite.com</a><br>
-                Tel: 123-456-7890
-            </address>
-        </div>
-
-        <div class="footer-col">
-
-            <h4>MENU</h4>
-            <ul class="footer-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#pricing">Plans & Pricing</a></li>
-                <li><a href="#tools">Tools & Tips</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-
-        <div class="footer-col">
-            <h4>SOCIALS</h4>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3 class="footer-logo">JAMES CONSULTING</h3>
+                <address>
+                    500 Terry Francine Street,<br>
+                    San Francisco, CA 94158<br>
+                    Mail: <a href="mailto:info@mysite.com">info@mysite.com</a><br>
+                    Tel: 123-456-7890
+                </address>
             </div>
-            <div class="copyright">
-                <p>© 2035 by JAMES CONSULTING.</p>
-                <p>Powered and secured by <a href="#">Wix</a></p>
+
+            <div class="footer-col">
+
+                <h4>MENU</h4>
+                <ul class="footer-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#pricing">Plans & Pricing</a></li>
+                    <li><a href="#tools">Tools & Tips</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>SOCIALS</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="copyright">
+                    <p>© 2035 by JAMES CONSULTING.</p>
+                    <p>Powered and secured by <a href="#">Wix</a></p>
+                </div>
             </div>
         </div>
-    </div>
 
 
-     <div id="chatBox">
-        <p>Hello 👋</p>
-        <input type="text" placeholder="Type message">
-        <button onclick="toggleChat()">Close</button>
-     </div>
-</footer>
+        <div id="chatBox">
+            <p>Hello 👋</p>
+            <input type="text" placeholder="Type message">
+            <button onclick="toggleChat()">Close</button>
+        </div>
+    </footer>
 
 
 
-    <script src="website.js"></script>
+
+
+
+    <script>
+        const testimonials = [
+            { role: "Project Manager", name: "Dora Bridges" },
+            { role: "Operations Manager", name: "Sima Patel" }
+        ];
+
+        let currentIndex = 0;
+
+        function updateTestimonial(index) {
+            const roleEl = document.querySelector('.author-info .role');
+            const nameEl = document.querySelector('.author-info .name');
+            const dots = document.querySelectorAll('.dot');
+
+            roleEl.textContent = testimonials[index].role;
+            nameEl.textContent = testimonials[index].name;
+
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === index);
+            });
+        }
+
+        document.querySelector('.next-btn').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            updateTestimonial(currentIndex);
+        });
+
+
+        function toggleChat() {
+            let chat = document.getElementById("chatBox");
+
+            if (chat.style.display === "block") {
+                chat.style.display = "none";
+            } else {
+                chat.style.display = "block";
+            }
+        }
+
+    </script>
 </body>
 
 </html>

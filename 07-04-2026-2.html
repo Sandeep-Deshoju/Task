@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            transition: background-color 3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        .main-container {
+            text-align: center;
+            width: 300px;
+            height: 300px;
+            box-shadow: 0 10px 20px rgba(164, 6, 6, 0.2);
+            border-radius: 30px;
+        }
+
+        .dice {
+            font-size: 150px;
+            margin-bottom: 20px;
+            color: #333;
+            background: rgb(154, 165, 132);
+            padding: 20px;
+            border-radius: 30px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #8c6e6e;
+            color: rgb(7, 1, 1);
+            border: none;
+            border-radius: 50px;
+            transition: transform 2s ease;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body>
+    
+              
+    
+    
+    <div class="main-container">
+        <div class="dice" id="dice">⚀</div>
+        <button id="roll-btn">Roll Dice</button>
+    </div>
+
+
+
+
+    <script>
+        const dice = document.getElementById('dice');
+        const rollBtn = document.getElementById('roll-btn');
+        const body = document.body;
+
+        // Dice Unicode characters for 1-6
+
+
+        const diceFaces = ['&#9856;', '&#9857;', '&#9858;', '&#9859;', '&#9860;', '&#9861;'];
+
+
+        
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        rollBtn.addEventListener('click', () => {
+            // 1. Generate random number 1-6
+            const randomIndex = Math.floor(Math.random() * 6);
+
+            // 2. Change Dice Face
+            dice.innerHTML = diceFaces[randomIndex];
+
+            // 3. Change Background Color
+            body.style.backgroundColor = getRandomColor();
+        });
+
+    </script>
+
+</body>
+
+</html>

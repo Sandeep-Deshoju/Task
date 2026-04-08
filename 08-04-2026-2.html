@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Javascript</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #6bb785;
+            min-height: 100vh;
+        }
+
+        .content {
+            text-align: center;
+            background: #fafafa;
+            padding: 16px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 300px;
+            height: 250px;
+        }
+
+        .content h2 {
+            font-size: 30px;
+            margin: 8px 0;
+        }
+
+        .content span {
+            font-size: 70px;
+            margin: 10px 0;
+            color: #1b07ce;
+        }
+
+        .content .options {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        .content .options button {
+            padding: 0.25em;
+            padding-top: 20px;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+            border: 2px solid #22b455;
+            border-radius: 8px;
+            background: none;
+            outline: none;
+            color: #853405;
+            cursor: pointer;
+            transition: .3s ease-in-out;
+        }
+
+        .content .options button:hover {
+            background: #3005cb;
+            color: #fafafa;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h2>Tally 🤖 Counter</h2>
+        <span id="num">0</span>
+        <div class="options">
+            <button id="add"><i class="las la-plus"></i></button>
+            <button id="reset"><i class="las la-undo-alt"></i></button>
+            <button id="subtract"><i class="las la-minus"></i></button>
+        </div>
+    </div>
+    <script>
+        let count = 0;
+        const countElem = document.getElementById("num");
+        const addBtn = document.getElementById("add");
+        const resetBtn = document.getElementById("reset");
+        const subtractBtn = document.getElementById("subtract");
+
+
+        addBtn.addEventListener("click", () => {
+            count++;
+            countElem.innerHTML = count;
+        })
+
+
+        subtractBtn.addEventListener("click", () => {
+            count--;
+            countElem.innerHTML = count;
+        })
+
+
+        resetBtn.addEventListener("click", () => {
+            count = 0;
+            countElem.innerHTML = count;
+        })
+    </script>
+</body>
+</body>
+
+</html>

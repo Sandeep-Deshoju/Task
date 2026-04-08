@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me For Support</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+        }
+
+        /* Main Layout */
+
+
+        .container {
+            display: flex;
+            width: 900px;
+            margin: 50px auto;
+        }
+
+
+
+        /* Left side */
+
+        .left {
+            width: 30%;
+            padding: 20px;
+            border-left: 2px solid #b9da81;
+        }
+
+        .left h1 {
+            font-size: 40px;
+        }
+
+        .left p {
+            color: rgb(44, 44, 44);
+        }
+
+
+
+
+        /* Right side form */
+
+
+        .right {
+            width: 70%;
+            padding: 20px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: none;
+            border-bottom: 2px solid #b4bf19;
+            padding: 10px;
+            margin-top: 20px;
+            outline: none;
+        }
+
+        /* Checkbox text */
+
+
+        .checkbox {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .checkbox input {
+            margin-right: 10px;
+            color: grey;
+        }
+
+        .checkbox span {
+            color: red;
+        }
+
+        .required {
+            color: red;
+        }
+
+
+
+
+
+        .captcha-box {
+            width: 350px;
+            height: 60px;
+            border: 2px solid #2ba066;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            border-radius: 40px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .captcha-box  left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .left input {
+            width: 10px;
+            height: 10px;
+        }
+
+        .right {
+            text-align: center;
+            font-size: 10px;
+            color: black;
+        }
+
+        .logo {
+            width: 15px;
+            height: 15px;
+            background: url('https://www.gstatic.com/recaptcha/api2/logo_48.png') no-repeat center;
+            background-size: contain;
+            margin: auto;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /* Submit button */
+
+
+            button {
+                margin-top: 20px;
+                padding: 10px 20px;
+                background: red;
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background: darkred;
+            }
+    </style>
+
+
+</head>
+
+
+<body>
+
+    <div class="container">
+
+        <!-- Left Side -->
+
+        <div class="left">
+            <h1>Contact Us</h1>
+            <p>Let us know how we can help.</p>
+        </div>
+
+        <!-- Right Side Form -->
+
+        <div class="right">
+            <form id="contactForm">
+
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Your Email Address" required>
+
+                <select required>
+                    <option>Type of Inquiry</option>
+                    <option>General</option>
+                    <option>Support</option>
+                    <option>Contact</option>
+                </select>
+
+                <input type="text" placeholder="Company">
+
+                <select>
+                    <option>India</option>
+                    <option>Srilanka</option>
+                    <option>South africa</option>
+                </select>
+
+                <textarea placeholder="Your Message"></textarea>
+
+
+
+                <div class="checkbox">
+                    <input type="checkbox">
+                    <label>
+                        By submitting this form, I understand that my data will be processed by WNS (Holdings) Ltd. as
+                        indicated above and described in the
+                        <span>Privacy Policy</span>. <span class="required">*This is a required field.</span>
+                    </label>
+                </div>
+
+
+                <!-- Fake captcha (UI only) -->
+
+
+                <div class="captcha-box">
+                    <div class="left">
+                        <input type="checkbox" id="robotCheck">
+                        <label for="robotCheck">I'm not a robot</label>
+                    </div>
+                    <div class="right">
+                        <div class="logo"></div>
+                        <p>reCAPTCHA</p>
+                    </div>
+                </div>
+
+
+
+                <button type="submit">SUBMIT</button>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <script>
+        const form = document.getElementById("contactForm");
+
+        form.addEventListener("submit",
+            function (e) {
+                e.preventDefault();
+                alert("Form submitted successfully");
+            });
+    </script>
+
+</body>
+
+</html>
